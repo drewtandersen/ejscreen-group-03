@@ -5,8 +5,8 @@ date: "11/15/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 library(tidyverse)
 library(janitor)
@@ -23,7 +23,8 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
   geom_hex() + 
   theme_minimal() +
   scale_fill_gradient(low = "purple", high = "red") +
-  labs(x = "Percent Population White (%)",
+  labs(x = "Percent White Population (%)",
        y = "CalEnviroScreen Score")
 ```
 
+**Figure 1** Percent white population versus the aggregate CalEnviroScreen 3.0 score in California. The a higher count of populations for each hexxed bin is indicated by a redder hue. 
