@@ -5,8 +5,10 @@ date: "11/15/2021"
 output: html_document
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+**Data:** CalEnviroScreen 3.0 (2017). *California Environmental Justice Alliance*. https://caleja.org/wp-content/uploads/2015/09/CES3.0-5.pdf
+
+```{r setup, include = TRUE, warning = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE , message = FALSE, warning = FALSE)
 
 library(tidyverse)
 library(janitor)
@@ -28,3 +30,5 @@ ggplot(data = ces, aes(x = white_percent, y = ces_3_0_score)) +
 ```
 
 **Figure 1** Percent white population versus the aggregate CalEnviroScreen 3.0 score in California. The a higher count of populations for each hexxed bin is indicated by a redder hue. 
+
+The overall trend is that as the white population increases, the CalEnviroScreen score decreases. A lower score means a better quality of life and the population associated with this score experience less pollution, social inequality, and economic inequality, so for this plot, a higher proportion of white residents is associated with a better quality of life. 
